@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bahasa Indonesia</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- feather icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- my style -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      /* Initially hide all content items */
+      .materi-item-content {
+        display: none;
+      }
+
+      /* Flexbox for proper column layout */
+      .materi-wrapper {
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+      }
+
+      .materi-nav,
+      .materi-content {
+        width: 45%;
+      }
+
+      .materi-item {
+        margin-bottom: 1rem;
+      }
+
+      .materi-details {
+        margin-left: 1rem;
+        display: none;
+      }
+
+      .materi-item a:hover {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- navbar start -->
+    <nav class="navbar">
+      <a href="#" class="navbar-logo"><span>Bahasa</span> Indonesia</a>
+
+      <div class="navbar-nav">
+        <a href="#home">Home</a>
+        <a href="#materi">Materi</a>
+        <a href="#anggota">Anggota</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- hero section start -->
+    <section class="hero" id="home">
+      <main class="content">
+        <h1><span>Bahasa</span> Indonesia</h1>
+        <p>Pedoman Umum Ejaan Bahasa Indonesia</p>
+      </main>
+    </section>
+    <!-- hero section end -->
+
+    <!-- materi section start -->
+    <section id="materi" class="materi">
+      <h2><span>Materi</span> Kami</h2>
+      <div class="materi-wrapper">
+        <!-- Materi Nav -->
+        <div class="materi-nav">
+          <!-- Pemakaian Huruf -->
+          <div class="materi-item">
+            <a
+              href="#pemakaian-huruf"
+              class="materi-link"
+              onclick="toggleMateri('pemakaian-huruf')"
+              >Pemakaian Huruf</a
+            >
+            <div class="materi-details" id="pemakaian-huruf">
+              <ul>
+                <li>
+                  <a
+                    href="#huruf-abjad"
+                    class="materi-link"
+                    onclick="toggleMateri('huruf-abjad')"
+                    >Huruf Abjad</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#huruf-vokal"
+                    class="materi-link"
+                    onclick="toggleMateri('huruf-vokal')"
+                    >Huruf Vokal</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#huruf-kons"
+                    class="materi-link"
+                    onclick="toggleMateri('huruf-kons')"
+                    >Huruf Konsonan</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#huruf-dif"
+                    class="materi-link"
+                    onclick="toggleMateri('huruf-dif')"
+                    >Huruf Diftong</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#gab-huruf-kon"
+                    class="materi-link"
+                    onclick="toggleMateri('gab-huruf-kon')"
+                    >Gabungan Huruf Konsonan</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#huruf-kapital"
+                    class="materi-link"
+                    onclick="toggleMateri('huruf-kapital')"
+                    >Huruf Kapital</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#huruf-miring"
+                    class="materi-link"
+                    onclick="toggleMateri('huruf-miring')"
+                    >Huruf Miring</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#huruf-tebal"
+                    class="materi-link"
+                    onclick="toggleMateri('huruf-tebal')"
+                    >Huruf Tebal</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Penulisan Kata -->
+          <div class="materi-item">
+            <a
+              href="#penulisan-kata"
+              class="materi-link"
+              onclick="toggleMateri('penulisan-kata')"
+              >Penulisan Kata</a
+            >
+            <div class="materi-details" id="penulisan-kata">
+              <ul>
+                <li>
+                  <a
+                    href="#kata-dasar"
+                    class="materi-link"
+                    onclick="toggleMateri('kata-dasar')"
+                    >Kata Dasar</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#kata-berimbuhan"
+                    class="materi-link"
+                    onclick="toggleMateri('kata-berimbuhan')"
+                    >Kata Berimbuhan</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#bentuk-ulang"
+                    class="materi-link"
+                    onclick="toggleMateri('bentuk-ulang')"
+                    >Bentuk Ulang</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#gabungan-kata"
+                    class="materi-link"
+                    onclick="toggleMateri('gabungan-kata')"
+                    >Gabungan Kata</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#pemenggalan-kata"
+                    class="materi-link"
+                    onclick="toggleMateri('pemenggalan-kata')"
+                    >Pemenggalan Kata</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#kata-depan"
+                    class="materi-link"
+                    onclick="toggleMateri('kata-depan')"
+                    >Kata Depan</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Pemakaian Tanda Baca -->
+          <div class="materi-item">
+            <a
+              href="#pemakaian-tanda-baca"
+              class="materi-link"
+              onclick="toggleMateri('pemakaian-tanda-baca')"
+              >Pemakaian Tanda Baca</a
+            >
+            <div class="materi-details" id="pemakaian-tanda-baca">
+              <ul>
+                <li>
+                  <a
+                    href="#tanda-titik"
+                    class="materi-link"
+                    onclick="toggleMateri('tanda-titik')"
+                    >Tanda Titik</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#tanda-koma"
+                    class="materi-link"
+                    onclick="toggleMateri('tanda-koma')"
+                    >Tanda Koma</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#tanda-titik-koma"
+                    class="materi-link"
+                    onclick="toggleMateri('tanda-titik-koma')"
+                    >Tanda Titik Koma</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#tanda-titik-dua"
+                    class="materi-link"
+                    onclick="toggleMateri('tanda-titik-dua')"
+                    >Tanda Titik Dua</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#tanda-hubung"
+                    class="materi-link"
+                    onclick="toggleMateri('tanda-hubung')"
+                    >Tanda Hubung</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#tanda-pisah"
+                    class="materi-link"
+                    onclick="toggleMateri('tanda-pisah')"
+                    >Tanda Pisah</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#tanda-tanya"
+                    class="materi-link"
+                    onclick="toggleMateri('tanda-tanya')"
+                    >Tanda Tanya</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#tanda-seru"
+                    class="materi-link"
+                    onclick="toggleMateri('tanda-seru')"
+                    >Tanda Seru</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#tanda-elipsis"
+                    class="materi-link"
+                    onclick="toggleMateri('tanda-elipsis')"
+                    >Tanda Elipsis</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#tanda-petik"
+                    class="materi-link"
+                    onclick="toggleMateri('tanda-petik')"
+                    >Tanda Petik</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#tanda-kurung"
+                    class="materi-link"
+                    onclick="toggleMateri('tanda-kurung')"
+                    >Tanda Kurung</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Penulisan Unsur Serapan -->
+          <div class="materi-item">
+            <a
+              href="#penulisan-unsur-serapan"
+              class="materi-link"
+              onclick="toggleMateri('penulisan-unsur-serapan')"
+              >Penulisan Unsur Serapan</a
+            >
+            <div class="materi-details" id="penulisan-unsur-serapan">
+              <ul>
+                <li>
+                  <a
+                    href="#kata-sandang"
+                    class="materi-link"
+                    onclick="toggleMateri('kata-sandang')"
+                    >Kata Sandang</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#kata-serapan"
+                    class="materi-link"
+                    onclick="toggleMateri('kata-serapan')"
+                    >Kata Serapan</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- materi content -->
+        <div class="materi-content">
+          <!-- Pemakaian Huruf Content -->
+          <div id="huruf-abjad" class="materi-item-content">
+            <h4>Huruf Abjad</h4>
+            <p>Penjelasan mengenai huruf abjad...</p>
+          </div>
+          <div id="huruf-vokal" class="materi-item-content">
+            <h4>Huruf Vokal</h4>
+            <p>Penjelasan mengenai huruf vokal...</p>
+          </div>
+          <div id="huruf-kons" class="materi-item-content">
+            <h4>Huruf Konsonan</h4>
+            <p>Penjelasan mengenai huruf konsonan...</p>
+          </div>
+          <div id="huruf-dif" class="materi-item-content">
+            <h4>Huruf Diftong</h4>
+            <p>Penjelasan mengenai huruf diftong...</p>
+          </div>
+
+          <!-- Penulisan Kata Content -->
+          <div id="kata-dasar" class="materi-item-content">
+            <h4>Kata Dasar</h4>
+            <p>Penjelasan mengenai kata dasar...</p>
+          </div>
+          <div id="kata-berimbuhan" class="materi-item-content">
+            <h4>Kata Berimbuhan</h4>
+            <p>Penjelasan mengenai kata berimbuhan...</p>
+          </div>
+          <div id="bentuk-ulang" class="materi-item-content">
+            <h4>Bentuk Ulang</h4>
+            <p>Penjelasan mengenai bentuk ulang...</p>
+          </div>
+
+          <!-- Pemakaian Tanda Baca Content -->
+          <div id="tanda-titik" class="materi-item-content">
+            <h4>Tanda Titik</h4>
+            <p>Penjelasan mengenai tanda titik...</p>
+          </div>
+          <div id="tanda-koma" class="materi-item-content">
+            <h4>Tanda Koma</h4>
+            <p>Penjelasan mengenai tanda koma...</p>
+          </div>
+          <div id="tanda-titik-koma" class="materi-item-content">
+            <h4>Tanda Titik Koma</h4>
+            <p>Penjelasan mengenai tanda titik koma...</p>
+          </div>
+
+          <!-- Penulisan Unsur Serapan Content -->
+          <div id="kata-sandang" class="materi-item-content">
+            <h4>Kata Sandang</h4>
+            <p>Penjelasan mengenai kata sandang...</p>
+          </div>
+          <div id="kata-serapan" class="materi-item-content">
+            <h4>Kata Serapan</h4>
+            <p>Penjelasan mengenai kata serapan...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- materi section end -->
+
+    <section id="anggota" class="anggota">
+      <h2><span>Anggota</span> Kami</h2>
+      <div class="anggota-list">
+        <div class="anggota">
+          <img src="/img/fara.jpeg" alt="Nama" />
+          <p>
+            FARADILA OCTAVIA NABILA <br />
+            NIM 622023016
+          </p>
+        </div>
+        <div class="anggota">
+          <img src="/img/sheren.jpeg" alt="Nama" />
+          <p>
+            SHEREN AUSTRIN PARARTA <br />
+            NIM 622024018
+          </p>
+        </div>
+        <div class="anggota">
+          <img src="https://via.placeholder.com/100" alt="Nama" />
+          <p>
+            Nama 3 <br />
+            NIM 12347
+          </p>
+        </div>
+        <div class="anggota">
+          <img src="https://via.placeholder.com/100" alt="Nama" />
+          <p>
+            Nama 4 <br />
+            NIM 12348
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer start -->
+    <footer>
+      <div class="socials">
+        <!-- Social Media Links -->
+        <a
+          href="https://www.instagram.com/faradilaoctv?igsh=NXVxcWF2cXM3a2E2"
+          target="_blank"
+        >
+          <i data-feather="instagram"></i>
+          <!-- Instagram Icon -->
+        </a>
+        <a
+          href="https://www.linkedin.com/in/faradila-octavia-4a1b80341?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+          target="_blank"
+        >
+          <i data-feather="linkedin"></i>
+          <!-- LinkedIn Icon -->
+        </a>
+        <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank">
+          <i data-feather="mail"></i>
+          <!-- Twitter Icon -->
+        </a>
+      </div>
+      <div class="links">
+        <a href="#home">Home</a>
+        <a href="#materi">Materi</a>
+        <a href="#anggota">Anggota</a>
+        <!-- Kontak link in footer -->
+      </div>
+
+      <div class="credit">
+        <p>Created by <a href="">Kelompok 8</a>. | &copy; 2025.</p>
+      </div>
+    </footer>
+    <!-- footer end -->
+
+    <!-- feather icons -->
+    <script>
+      // Feather icon replace
+      feather.replace();
+
+      // Hamburger menu toggle
+      const navbarNav = document.querySelector(".navbar-nav");
+      const hamburger = document.querySelector("#hamburger-menu");
+
+      hamburger.onclick = () => {
+        navbarNav.classList.toggle("active");
+      };
+
+      // Close navbar if clicked outside
+      document.addEventListener("click", function (e) {
+        if (!hamburger.contains(e.target) && !navbarNav.contains(e.target)) {
+          navbarNav.classList.remove("active");
+        }
+      });
+
+      // Toggle the sub-sections and materi content
+      function toggleMateri(id) {
+        const allMateri = document.querySelectorAll(".materi-item-content");
+        const target = document.getElementById(id);
+
+        // Hide all sections first
+        allMateri.forEach((m) => {
+          m.style.display = "none";
+        });
+
+        // Toggle the clicked section
+        if (target) {
+          target.style.display =
+            target.style.display === "block" ? "none" : "block";
+        }
+      }
+
+      // Initially hide all content and only display the first section when page loads
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll(".materi-item-content").forEach((item) => {
+          item.style.display = "none";
+        });
+      });
+    </script>
+  </body>
+</html>
